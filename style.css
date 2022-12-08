@@ -9,3 +9,132 @@ header {
     background: linear-gradient(pink, red);
     height: 100vh;
 }
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: 'Ndot-55', 'NType82Mono'
+}
+
+header { 
+    background-color: rgb(34, 34, 34);
+    z-index: 100;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+gap: 60px;
+}
+
+.nav-branding {
+    font-size: 2rem;
+    z-index: 900;
+}
+
+.nav-link {
+    transition: 0.7s ease;
+    z-index: 1;
+}
+
+.nav-link:hover {
+    color: cadetblue;
+    z-index: 1;
+}
+
+.hamburger {
+    cursor: pointer;
+}
+
+.Point {
+    display: block;
+    width: 5px;
+    height: 5px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+
+    .hamburger { 
+        display: block;
+        z-index: 900;
+        display: flex;
+    }
+
+
+    .hamburger.active .Point:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .Point:nth-child(1) {
+       transform: translateX(40px) rotate(45deg);
+       width: 25px;
+       height: 5px;
+       border-radius: 5px;
+    }
+    .hamburger.active .Point:nth-child(3) {
+        transform: translateX(0px) rotate(-45deg);
+        width: 25px;
+        height: 5px;
+        border-radius: 5px;
+     }
+
+     .nav-menu {
+         position: fixed;
+         top: -200px;
+         left: 0;
+         gap: 0;
+         flex-direction: column;
+         background-color: rgb(34, 34, 34);
+         width: 100%;
+         text-align: center;
+         transition: 0.6s;
+         z-index: 1;
+     }
+
+     .nav-item {
+         margin: 16px 0;
+         z-index: 1;
+     }
+
+     .nav-menu.active {
+         left: 0;
+         top: 70px;
+         padding: 100px 0px;
+         gap: 100px;
+         z-index: 1;
+     }
+
+     .cacheBar {
+        background-color: rgb(34, 34, 34);
+        z-index: 800;
+        position: absolute;
+        top: 0px;
+        height: 70px;
+        width: 100%;
+     }
